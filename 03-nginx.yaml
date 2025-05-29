@@ -2,11 +2,11 @@
   hosts: frontend
   tasks:
   - name: Install nginx
-    ansible.bultin.package:
+    ansible.builtin.package:
       name: nginx
       state: installed
 
   - name: Start nginx
-    ansible.bultin.service:
+    ansible.builtin.service:
       name: nginx
       state: started
