@@ -1,0 +1,8 @@
+- name: variables usage from files
+  hosts: frontend
+  tasks:
+  - name: Print course info from file
+    ansible.builtin.debug:
+      msg: "Hello, I am learning {{ COURSE }}, duration {{ DURATION }} and the trainer is {{ TRAINER }}"
+
+      
