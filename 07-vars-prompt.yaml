@@ -1,7 +1,7 @@
 - name: Usage of Prompt
   hosts: local
   connection: local
-  vars_prompt:
+  vars_prompt:            # same like read command in shell
   - name: USERNAME
     prompt: Please enter user name
     private: true
