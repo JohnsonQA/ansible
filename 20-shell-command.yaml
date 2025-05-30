@@ -7,6 +7,6 @@
     register: result #same like $() in shell which takes and output of shell command and store in the result
 
   - name: check the result status
-    ansibile.builtin.debug:
+    ansible.builtin.debug:
       msg: "{{ result }}"   #we can check the output is false or true for above result
 
