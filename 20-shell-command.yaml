@@ -2,6 +2,6 @@
   hosts: frontend
   tasks:
   - name: redirect ls to output to a file
-    ansibile.builtin.command: "ls -ltr > /tmp/output.txt"
-    #ansibile.builtin.shell: "ls -ltr > /tmp/output.txt"
+    #ansibile.builtin.command: "ls -ltr > /tmp/output.txt"
+    ansibile.builtin.shell: "ls -ltr > /tmp/output.txt"
 
