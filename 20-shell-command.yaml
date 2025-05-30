@@ -13,9 +13,9 @@
   - name: redirect ls to output to a file
     ansible.builtin.command: "ls -ltr"   #It will redirects the o/p as it doesn't need any redirections or pipes
     #ansible.builtin.shell: "ls -ltr > /tmp/output.txt"   # It will redirects and create output.txt in node server
-    register: "command result" #same like $() in shell which takes and output of shell command and store in the 
+    register: "commandResult" #same like $() in shell which takes and output of shell command and store in the 
 
 
   - name: check the result status
     ansible.builtin.debug:
-      msg: "{{ command result }}"   #we can check the output is false or true for above result
+      msg: "{{ commandResult }}"   #we can check the output is false or true for above result
