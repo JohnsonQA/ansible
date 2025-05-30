@@ -1,0 +1,7 @@
+- name: shell vs command
+  hosts: frontend
+  tasks:
+  - name: redirect ls to output file.txt in node server
+    ansibile.builtin.command: "ls -ltr > /tmp/output.txt"
+    #ansibile.builtin.shell: "ls -ltr > /tmp/output.txt"
+
