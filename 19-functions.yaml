@@ -46,7 +46,7 @@
   - name: check ip addr is valid or not
     vars:
       ip: "300.368.255.233"
-    ansibile.builtin.debug:
+    ansible.builtin.debug:
       msg: "ip addr is {{ ip | ansible.utils.ipaddr }}"
   
   
