@@ -2,6 +2,11 @@
   hosts: frontend
   tasks:
   - name: redirect ls to output to a file
-    #ansible.builtin.command: "ls -ltr > /tmp/output.txt"
-    ansible.builtin.shell: "ls -ltr > /tmp/output.txt"
+    #ansible.builtin.command: "ls -ltr > /tmp/output.txt"  #It will not redirects the o/p as its a command not have luxiorius permissions
+    ansible.builtin.shell: "ls -ltr > /tmp/output.txt"   # It will redirects and create output.txt in node server
+    register: result #same like $() in shell which takes and output of shell command and store in the result
+
+  - name: check the result status
+    ansibile.builtin.debug:
+      msg: "{{ result }}"   #we can check the output is false or true for above result
 
