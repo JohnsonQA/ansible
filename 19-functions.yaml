@@ -30,4 +30,17 @@
       - {'key': 'Fielder', 'value': 'Jadeja'}     
     ansible.builtin.debug:
       msg: "Team is {{ Team | items2dict }}"   # list to map
+
+  - name: Convert to upper
+    vars:
+      name: Virat Kohli
+    ansible.builtin.debug:
+      msg: "Name is {{ name | upper }}"
+
+  - name: Convert to lower
+    vars:
+      name: Virat Kohli
+    ansible.builtin.debug:
+      msg: "Name is {{ name | lower }}"
+  
   
