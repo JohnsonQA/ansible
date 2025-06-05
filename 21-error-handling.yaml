@@ -10,6 +10,7 @@
     ignore_errors: true  # it will ignore the error
 
   - name: Create user
+    become: yes
     ansible.builtin.command: useradd roboshop
     when: output.rc != 0 # It means user doesn't exists
   
