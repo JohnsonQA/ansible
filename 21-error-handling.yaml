@@ -1,6 +1,6 @@
 # Check user exists or not and If not exists handle error
 
-- name: check user exists or not 
+- name: user exists or not 
   hosts: local
   connection: local
   tasks:
