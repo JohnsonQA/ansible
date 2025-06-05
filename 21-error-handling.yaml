@@ -1,0 +1,19 @@
+# Check user exists or not and If not exists handle error
+
+- name: check user exists or not 
+  hosts: local
+  connection: local
+  tasks:
+  - name: check roboshop user exists or not 
+    ansible.builtin.command: id roboshop
+    register: output
+    ignore_error: true  # it will ignore the error
+
+  - name: Create user
+    ansible.builtin.command: useradd roboshop
+    when: output.rc != 0 # It means user doesn't exists
+  
+  - name: Create user
+    ansible.builtin.debug:
+      msg: "user already exists"
+    when: output.rc == 0 
