@@ -1,7 +1,7 @@
 - name: Install nginx
   hosts: dynamic_frontend
   become: yes
-  serial: 4 #Which will run 4 instances at a time by grouping together
+  serial: 4 #Which will run 4 instances at a time by grouping together and install and run and enable the nginx
   tasks:
   - name: Install nginx
     ansible.builtin.dnf:
