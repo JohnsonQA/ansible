@@ -1,0 +1,11 @@
+plugin: amazon.aws.aws_ec2
+regions:
+- us-east-1
+filters:
+  tag:Name: frontend # Instances name
+  instance-state-name: running 
+hostnames:
+  - private-ip-address    # we can specify the variables what we are looking for. here i have private ip
+compose:
+  ansible_host: private-ip-address  # This sets the aws private ip to ansible host
+
