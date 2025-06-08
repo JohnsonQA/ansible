@@ -16,7 +16,6 @@
       name: nginx
       state: started
       enabled: yes
-    command: sleep 10
   
   - name: Pause for 10 seconds after installation
     ansible.builtin.pause:
