@@ -7,5 +7,5 @@ filters:
 hostnames:
   - private-ip-address    # we can specify the variables what we are looking for. here i have private ip
 compose:
-  ansible_host: private-ip-address  # This sets the aws private ip to ansible host
+  ansible_host: private-ip-address  # This sets the aws private ip to ansible host without changing host name
 
